@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hippo.jun.weandseoul">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hippo.jun.weandseoul"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/app_key" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_app_key" />
+
+        <activity android:name=".LoadingActivity">
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ParkActivity" />
+        <activity android:name=".PlaceInfoActivity1" />
+        <activity android:name=".PlaceInfoActivity2" />
+        <activity android:name=".PlaceInfoActivity3" />
+        <activity android:name=".AddTodayActivity" />
+        <activity android:name=".ShowTodayActivity" />
+        <activity android:name=".AddMeetingActivity" />
+        <activity android:name=".ShowMeetingActivity" />
+        <activity android:name=".BicycleActivity"></activity>
+    </application>
+
+</manifest>

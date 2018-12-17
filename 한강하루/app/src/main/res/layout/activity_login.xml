@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hippo.jun.weandseoul.LoginActivity">
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We and Seoul"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <EditText
+        android:id="@+id/userid"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:hint="ID"
+        app:layout_constraintTop_toBottomOf="@id/t1"
+        app:layout_constraintLeft_toLeftOf="@id/t1"
+        app:layout_constraintRight_toRightOf="@id/t1"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/userpw"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:hint="PW"
+        app:layout_constraintTop_toBottomOf="@id/userid"
+        app:layout_constraintLeft_toLeftOf="@id/userid"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/userpw"
+        app:layout_constraintLeft_toLeftOf="@id/userpw"
+        app:layout_constraintRight_toRightOf="@id/userpw"/>
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"
+        app:layout_constraintLeft_toLeftOf="@id/loginBtn"
+        app:layout_constraintRight_toRightOf="@id/loginBtn"/>
+
+</android.support.constraint.ConstraintLayout>
